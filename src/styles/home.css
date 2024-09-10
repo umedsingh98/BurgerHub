@@ -4,7 +4,7 @@
 .hero_section {
   position: relative;
   display: flex;
-  margin-top: 100px;
+  margin-top: 70px;
   justify-content: flex-end;
   align-items: flex-end;
   background: url("../assets/hero/bg.jpg") no-repeat center center;
