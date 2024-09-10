@@ -4,11 +4,12 @@
 .hero_section {
   position: relative;
   display: flex;
-  margin-top: 90px;
+  margin-top: 100px;
   justify-content: flex-end;
   align-items: flex-end;
-  background: url("https://img.freepik.com/free-photo/front-view-burger-with-veggies-meat_23-2148868239.jpg?t=st=1725880789~exp=1725884389~hmac=d0d60bae46e68159a149d2e43594647dabacc06a85bb215d2f3215c862ea9c2f&w=1380") no-repeat center center;
-  background-attachment: fixed;
+  background: url("../assets/hero/bg.jpg") no-repeat center center;
+  background-size: 95% 100%;
+  background-attachment: fixed; 
   padding-top: 150px;
   padding-bottom: 140px;
 }
