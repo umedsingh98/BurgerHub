@@ -151,12 +151,13 @@
     font-size: 1rem;
   }
   
-  .hero_section {
-    height: 80vh; /* Reduce height on smaller devices */
+  .video {
+       object-position: center; /* Center the video for better mobile focus */
   }
 
-  .video {
-    object-position: center; /* Center the video for better mobile focus */
+  .hero_section {
+    background: url("../../assets/hero/bg.jpg") no-repeat center center/cover;
+    height: 80vh; /* Adjust the height for mobile */
   }
 }
 
