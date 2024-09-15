@@ -156,6 +156,8 @@
   }
 
   .hero_section {
+    object-fit: contain;
+    background-size: cover;
     background: url("../../assets/hero/bg.jpg") no-repeat center center/cover;
     height: 80vh; /* Adjust the height for mobile */
   }
