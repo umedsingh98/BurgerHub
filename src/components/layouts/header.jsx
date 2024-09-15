@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../../styles/headerStyle.css";
@@ -6,9 +6,16 @@ import Logo from "../../assets/logo/burgerLogo.jpg";
 
 function Header() {
 
-  return (
+  const [nav, setNav] = useState();
+  const changeOnScroll = () => {
+    const scrollValue = document?.documentElement.scrollTop;
+    scrollValue > 100 ? setNav(true): setNav(false);
+  }
+  window.addEventListener("scroll", changeOnScroll);
+
+    return (
     <header>
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar collapseOnSelect expand="lg" className={`${nav === true? "sticky": ""}`}>
         <Container>
           <Navbar.Brand href="#home">
             <div className="logo">

@@ -3,76 +3,165 @@
 
 .hero_section {
   position: relative;
+  height: 90vh;
   display: flex;
-  margin-top: 70px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background: url("../assets/hero/bg.jpg") no-repeat center center;
-  background-size: 95% 100%;
-  background-attachment: fixed; 
-  padding-top: 150px;
-  padding-bottom: 140px;
-}
-
-.hero_text{
- 
- width: 50%;
- padding: 0px 50px; 
-}
-.hero_section .price_badge {
-  background: url("../assets/hero/price-badge-yellow.png") no-repeat center
-    center;
-  background-size: cover;
-  position: absolute;
-  top: -20px;
-  right: 5px;
-  width: 180px;
-  height: 176px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
-.hero_section .badge_text {
+.overlay {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay on the video */
 }
 
-.hero_section .badge_text .only {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1;
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire area without distortion */
+  z-index: -1;
 }
 
-.hero_section .badge_text .price {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1;
+.hero_main {
+  color: #fff;
+  z-index: 1;
+  animation: fadeIn 3s ease;
 }
 
-.hero_section .hero_text h1 {
-  font-family: "Oswald", sans-serif;
-  font-size: 90px;
-  line-height: 1;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.hero_section .hero_text h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: 32px;
-  line-height: 1;
-  letter-spacing: 3px;
+.hero_main h1 {
+  font-size: 3.7rem; /* Default for large screens */
   margin-bottom: 20px;
+  color: #FFC300;
 }
 
-.hero_section .hero_text p {
-  padding: 0 25px;
+.hero_main h2 {
+  font-size: 2rem;
+}
+
+.hero_main p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero_main button{
+  margin-top: 25px;
+}
+
+@keyframes fadeIn{
+  0%{
+   opacity: 0;
+  }
+
+  100%{
+   opacity: 1;
+  }
+}
+
+/* Keyframes for fading in and sliding up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base styles for the hero section */
+.hero_main h1, h2, p, button {
+ 
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/* Animation timing delays */
+.hero_main h1 {
+  opacity: 0; /* Start hidden */
+  animation-name: fadeInUp;
+  animation-delay: 0.3s; /* Start animating slightly later */
+}
+
+.hero_main h2 {
+  opacity: 0; /* Start hidden */
+  animation-name: fadeInUp;
+  animation-delay: 0.6s; /* Start animating after the headline */
+}
+
+.hero_main p {
+  opacity: 0; /* Start hidden */
+  animation-name: fadeInUp;
+  animation-delay: 0.9s; /* Start animating after the subheadline */
+}
+
+.hero_main button{
+  opacity: 0; /* Start hidden */
+  animation-name: fadeInUp;
+  animation-delay: 1.2s; /* Start animating after the subheadline */ 
+
+}
+
+@media (max-width: 1024px) {
+  .hero_main h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero_main h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero_main p {
+    font-size: 1rem;
+  }
+
+  .order_now {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* For mobile devices (screens less than 768px) */
+@media (max-width: 768px) {
+  .hero_main h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero_main h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero_main p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .order_now {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+  }
+  
+  .hero_section {
+    height: 80vh; /* Reduce height on smaller devices */
+  }
+
+  .video {
+    object-position: center; /* Center the video for better mobile focus */
+  }
 }
 
 .about_section {
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 300px;
   background: url("../assets//about/about-1.jpg") no-repeat center center;
   background-size: cover;
@@ -402,40 +491,14 @@ display: none;
 }
 
 @media (max-width: 676px) {
-  .hero_section .hero_text h1 {
-    font-size: 60px;
+  .hero_section .hero_text{
+     font-size: 24px;
+
   }
 
-  .hero_section .price_badge {
-    background: url("../assets/hero/price-badge-yellow.png") no-repeat center
-      center;
-    background-size: cover;
-    position: absolute;
-    top: -20px;
-    right: 5px;
-    width: 150px;
-    height: 146px;
-    text-align: center;
-  }
-
-  .hero_section .badge_text {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .hero_section .badge_text .only {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1;
-  }
-
-  .hero_section .badge_text .price {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1;
-  }
+ .hero_section {
+  
+ }
 
   .blog_section .carousel.slide .carousel-inner .carousel-caption p{
     font-size: 16px;
