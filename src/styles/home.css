@@ -135,14 +135,14 @@
 @media (max-width: 768px) {
   
   .hero_main {
-    padding: 0px 20px;
+    padding: 0px 10px;
   }
   .hero_main h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .hero_main h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .hero_main p {
