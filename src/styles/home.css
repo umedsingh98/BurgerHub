@@ -38,7 +38,7 @@
 
 .hero_main h1 {
   font-size: 3.7rem; /* Default for large screens */
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #FFC300;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .hero_main button{
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 @keyframes fadeIn{
@@ -142,7 +142,7 @@
   }
 
   .hero_main h2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .hero_main p {
