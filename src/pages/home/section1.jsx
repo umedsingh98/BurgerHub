@@ -9,11 +9,10 @@ function Section1() {
       <div className="overlay"></div>
       <video src={burger} autoPlay loop muted playsInline className="video" poster={fallbackImage} />
       <div className=" hero_main text-center img-fluid">
-        <h1>Sink Your Teeth Into Perfection</h1>
-        <h2 >Juicy, Handcrafted Burgers, Grilled to Perfection.</h2>
+        <h1>Cheese Lovers, Rejoice!</h1>
+        <h2 >Double the Cheese, Double the Flavor</h2>
         <p className="pt-2 pb-2">
-          Enjoy our new Indian Tadka Masala Burger with Onion, Capsicum,
-          Red Chilli Sause and our secret ingredients.
+        Our Double Cheeseburger is a gooey, cheesy masterpiece, stacked with two juicy patties,topped with caramelized onions, and finished with a creamy cheese sauce. This is cheese heaven.
         </p>
         <Link to="/order" className="btn btn-lg">
           <button className="order_now">Order Now</button>
