@@ -14,7 +14,7 @@ function Section1() {
         <p className="pt-2 pb-2">
         Our Double Cheeseburger is a gooey, cheesy masterpiece, stacked with two juicy patties,topped with caramelized onions, and finished with a creamy cheese sauce. This is cheese heaven.
         </p>
-        <Link to="/order" className="btn btn-lg">
+        <Link to="/menu" className="btn btn-lg">
           <button className="order_now">Order Now</button>
         </Link>
       </div>

@@ -2,8 +2,7 @@
 
 header .navbar{
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 25px;
   background-color: transparent;
   top:0;
   z-index: 1000;
@@ -82,8 +81,8 @@ header .nav-link{
   color: black;
   font-size: 16px;
   font-weight: 600;
+  background: transparent;
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
   transition: all 15ms ease-in-out;
  -webkit-transition: all 15ms ease-in-out;
  -moz-transition: all 15ms ease-in-out;
@@ -100,10 +99,97 @@ header .nav-link:hover{
   color: var(--yellow);
 }
 
+/* Cart Styles */
 header .cart{
   position: relative;
-  top: -3px;
-  left: 5px;
+  
+  display: flex;
+  align-items: center;
+  justify-centent: center;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+header .cart:hover {
+  color: var(--yellow);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  font-size: 0.6rem !important;
+  padding: 12px;
+  border-radius: 50%;
+  border-radius: 50% !important;
+
+}
+
+/* User Dropdown Styles */
+.user-dropdown {
+  color: #333 !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.user-dropdown:hover {
+  color: var(--yellow) !important;
+}
+
+.user-dropdown:focus {
+  box-shadow: none;
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: var(--yellow);
+}
+
+.dropdown-divider {
+  margin: 0.5rem 0;
+  border-color: #e9ecef;
+}
+
+/* Login Button */
+.login {
+  margin-left: 10px;
+  font-size: 12px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border-radius: 25px;
+  padding: 0.3rem 1.5rem !important;
+  transition: all 0.3s ease;
+}
+
+.login:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+  color: white !important;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
 header .roundpoint{
@@ -137,5 +223,20 @@ header .roundpoint{
 
   header .nav-link{
     padding: 5px;
+  }
+  
+  .user-dropdown {
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+  }
+  
+  .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  .dropdown-item {
+    padding: 0.5rem 0;
   }
 }

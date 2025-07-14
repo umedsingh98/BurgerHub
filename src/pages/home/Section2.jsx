@@ -37,7 +37,7 @@ function Section2() {
                 auctor an tempus feugiat dolor lacinia cubilia curae integer
                 orci congue and metus integer primis in integer metus
               </p>
-              <Link to="/">
+              <Link to="/menu">
                 <button className="order_now btn_red">Explore Full Menu</button>
               </Link>
             </Col>
