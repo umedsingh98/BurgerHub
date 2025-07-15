@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Form, Tab, Nav, Alert } from 'react-bootstrap';
 import { useAuth } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaHistory, FaCog, FaSignOutAlt, FaEdit } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import './Profile.css';
@@ -18,30 +18,14 @@ const Profile = () => {
     address: user?.address || ''
   });
 
-  // Mock order history
-  const orderHistory = [
-    {
-      id: 1,
-      date: '2024-01-15',
-      items: ['Classic Cheeseburger', 'French Fries', 'Vanilla Milkshake'],
-      total: 24.97,
-      status: 'Delivered'
-    },
-    {
-      id: 2,
-      date: '2024-01-10',
-      items: ['Double Cheeseburger', 'Onion Rings'],
-      total: 22.98,
-      status: 'Delivered'
-    },
-    {
-      id: 3,
-      date: '2024-01-05',
-      items: ['Bacon Cheeseburger', 'French Fries'],
-      total: 19.98,
-      status: 'Cancelled'
+  // Dynamic order history from localStorage
+  const [orderHistory, setOrderHistory] = useState([]);
+  React.useEffect(() => {
+    if (user) {
+      const allOrders = JSON.parse(localStorage.getItem('orders') || '[]');
+      setOrderHistory(allOrders.filter(order => order.userId === user.id));
     }
-  ];
+  }, [user]);
 
   const handleLogout = () => {
     logout();
@@ -222,8 +206,11 @@ const Profile = () => {
                 {/* Orders Tab */}
                 <Tab.Pane eventKey="orders">
                   <Card>
-                    <Card.Header>
+                    <Card.Header style={{display: "flex", justifyContent: "space-between"}}>
                       <h4>Order History</h4>
+                      <Link to="/menu">
+                      <button style={{border: "1px solid black", borderRadius: "5px", padding: "3px 8px", fontSize: "12px", fontWeight: "500"}}>Back to menu</button>
+                    </Link>
                     </Card.Header>
                     <Card.Body>
                       {orderHistory.length === 0 ? (
@@ -252,7 +239,7 @@ const Profile = () => {
                                 </Col>
                                 <Col md={2}>
                                   <div className="order-total">
-                                    ${order.total}
+                                    ${order.total.toFixed(2)}
                                   </div>
                                 </Col>
                                 <Col md={1}>

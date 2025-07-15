@@ -269,14 +269,14 @@
 }
 
 .menu-card-image {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .menu-card:hover .menu-card-image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .popular-badge {
@@ -442,13 +442,13 @@
 }
 
 .menu_section .card:hover {
-  transform: scale(1.05);
+  transform: scale(1);
   transition: all 300ms ease-in-out;
   box-shadow: rgb(145, 145, 145) 1px 1px 6px;
 }
 
 .menu_section .card:hover .cardImage {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .menu_section .card:hover .add_to_cart a {

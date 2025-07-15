@@ -47,7 +47,21 @@ const Cart = () => {
       return;
     }
 
-    // Simulate order processing
+    // Save order to localStorage
+    const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+    const newOrder = {
+      id: Date.now(),
+      userId: user?.id,
+      date: new Date().toISOString().slice(0, 10),
+      items: cart.map(item => item.name),
+      total: calculateTotal(),
+      status: 'Delivered',
+      address: deliveryAddress,
+      notes: orderNotes,
+      paymentMethod,
+    };
+    localStorage.setItem('orders', JSON.stringify([newOrder, ...orders]));
+
     toast.success('Order placed successfully! You will receive a confirmation email shortly.');
     clearCart();
     setShowCheckout(false);

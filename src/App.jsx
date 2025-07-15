@@ -12,6 +12,7 @@ import Register from "./pages/auth/Register";
 import Menu from "./pages/menu/Menu";
 import Cart from "./pages/cart/Cart";
 import Profile from "./pages/profile/Profile";
+import About from "./pages/About";
 
 // Components
 import Layout from "./components/layouts/layout";
@@ -29,6 +30,7 @@ function App() {
               <Route path="/menu" element={<Menu />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </Router>
           <Toaster

@@ -60,11 +60,13 @@ function Header() {
                 </div>
               </Nav.Link>
 
+              <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginLeft: "5px"}}> <hr style={{height: "60%", width: "2px", backgroundColor: "black"}}/> </div>
+
               {/* User Menu */}
               {user ? (
                 <Dropdown align="end">
-                  <Dropdown.Toggle variant="link" className="user-dropdown">
-                    <FaUser /> {user.name}
+                  <Dropdown.Toggle variant="link" className="user-dropdown" style={{display:"flex", gap: "6px", textDecoration: "none", fontWeight: "600"}}>
+                  <FaUser style={{border: "2px solid gray", borderRadius: "50%", width: "23px", height: "23px", padding: "1px"}}/>  {user.name}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <Dropdown.Item as={Link} to="/profile">

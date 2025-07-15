@@ -74,7 +74,7 @@ function Section3() {
           {/* Products Grid */}
           <Row>
             {displayProducts.map((product) => (
-              <Col key={product.id} sm={6} lg={4} xl={3} className="mb-4">
+              <Col key={product.id} sm={6} lg={4} xl={4} className="mb-4">
                 <Card className="menu-card h-100">
                   <div className="product-image-container">
                     <Card.Img 
