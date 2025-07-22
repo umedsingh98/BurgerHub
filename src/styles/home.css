@@ -463,12 +463,12 @@
 }
 
 .menu_section .ads_img1 {
-  background: url("../assets//menu/ads-1.jpg");
+  background: url("/menu/ads-1.jpg");
   background-size: cover;
 }
 
 .menu_section .ads_img2 {
-  background: url("../assets//menu/ads-2.jpg");
+  background: url("/menu/ads-2.jpg");
   background-size: cover;
 }
 
