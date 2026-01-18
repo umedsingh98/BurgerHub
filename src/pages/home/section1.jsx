@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import burger from "../../assets/video/burger.mp4";
 import fallbackImage from "../../assets/hero/bg.jpg";
@@ -7,7 +6,7 @@ function Section1() {
   return (
     <section className="hero_section">
       <div className="overlay"></div>
-      <video src={burger} autoPlay loop muted playsInline className="video" poster={fallbackImage} />
+      <video src={burger} autoPlay loop muted playsInline className="video"  preload="auto" fetchPriority="high" poster={fallbackImage} />
       <div className=" hero_main text-center img-fluid">
         <h1>Cheese Lovers, Rejoice!</h1>
         <h2 >Double the Cheese, Double the Flavor</h2>
